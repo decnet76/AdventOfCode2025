@@ -7,6 +7,12 @@ def read_input(day: int) -> str:
     file_path = Path(__file__).parent.parent / f"day{day:02d}" / "input.txt"
     with open(file_path) as f:
         return f.read().strip()
+    
+def read_test_input(day: int) -> str:
+    """Read input file for a given day."""
+    file_path = Path(__file__).parent.parent / f"day{day:02d}" / "test.txt"
+    with open(file_path) as f:
+        return f.read().strip()    
 
 def timer(func):
     """Decorator to measure execution time."""
