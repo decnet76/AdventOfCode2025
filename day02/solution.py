@@ -40,7 +40,7 @@ def part1(data: str) -> int:
             id = str(i)
             #print(id, len(id)/2)
             if id[0:int(len(id)/2)] == id[int(len(id)/2):]:
-                print(id)
+                #print(id)
                 sum_invalid_ids += i
     return sum_invalid_ids
 
@@ -72,5 +72,5 @@ def part2(data: str) -> int:
 if __name__ == "__main__":
     data = read_input(2)
     #data = read_test_input(2)
-    #print("Part 1:", part1(data))
+    print("Part 1:", part1(data))
     print("Part 2:", part2(data)) 

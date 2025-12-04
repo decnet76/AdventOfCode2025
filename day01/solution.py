@@ -29,7 +29,7 @@ def part1(data: str) -> int:
     # Implement Part 1 logic here
     pos = 50
     cnt = 0
-    print(data)
+    #print(data)
     lines = data.splitlines()
     for line in lines:
         shift = int(line[1:])        
@@ -37,7 +37,7 @@ def part1(data: str) -> int:
             pos = (pos - shift)%100
         else:
             pos = (pos + shift)%100
-        print(line[0], shift, pos)
+        #print(line[0], shift, pos)
         if pos == 0:
             cnt += 1
     return cnt
@@ -48,7 +48,7 @@ def part2(data: str) -> int:
     pos = 50
     cnt = 0    
     #print(data)
-    print(round(abs((50 - 1000)//100)))
+    #print(round(abs((50 - 1000)//100)))
 
     lines = data.splitlines()
     for line in lines:
@@ -65,8 +65,8 @@ def part2(data: str) -> int:
                 cnt += 1
             pos = pos % 100
 
-        if cnt != cur_cnt:# and shift > 99 and line[0] == "L":
-            print(cur_pos, line[0], shift, pos, cur_cnt, cnt)
+        #if cnt != cur_cnt:# and shift > 99 and line[0] == "L":
+            #print(cur_pos, line[0], shift, pos, cur_cnt, cnt)
             #time.sleep(5)
     return cnt
 
@@ -75,5 +75,5 @@ def part2(data: str) -> int:
 if __name__ == "__main__":
     data = read_input(1)
     #data = read_test_input(1)
-    #print("Part 1:", part1(data))
+    print("Part 1:", part1(data))
     print("Part 2:", part2(data)) # 2797 too low

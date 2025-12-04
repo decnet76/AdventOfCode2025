@@ -56,7 +56,7 @@ def part1(data: str) -> int:
     accessible = 0
     grid = data.splitlines()
     accessible_list = check_accessible(grid)   
-    print("Accessible positions:", accessible_list)
+    #print("Accessible positions:", accessible_list)
 
     #time.sleep(3)
     return len(accessible_list)
@@ -79,15 +79,15 @@ def show(grid):
 def part2(data: str) -> int:
     accessible = 0
     grid = data.splitlines()
-    show(grid)
-    time.sleep(1)
+    #show(grid)
+    #time.sleep(1)
 
     while True:  
         accessible_list = check_accessible(grid)   
         grid = remove_from_grid(grid, accessible_list)
 
-        show(grid)
-        time.sleep(1)
+        #show(grid)
+        #time.sleep(1)
 
         if len(accessible_list) == 0:
             break
@@ -102,5 +102,5 @@ def part2(data: str) -> int:
 if __name__ == "__main__":
     data = read_input(4)
     #data = read_test_input(4)
-    #print("Part 1:", part1(data))
+    print("Part 1:", part1(data))
     print("Part 2:", part2(data)) 

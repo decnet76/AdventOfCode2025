@@ -54,7 +54,7 @@ def part1(data: str) -> int:
         else:
             sum_joltage += 10*second_max + max_digit
 
-        print(bank, digits, max_digit, second_max, max_pos, second_max_pos, joltage)
+        #print(bank, digits, max_digit, second_max, max_pos, second_max_pos, joltage)
 
         #time.sleep(3)
 
@@ -110,5 +110,5 @@ def part2(data: str) -> int:
 if __name__ == "__main__":
     data = read_input(3)
     #data = read_test_input(3)
-    #print("Part 1:", part1(data))
+    print("Part 1:", part1(data))
     print("Part 2:", part2(data)) 
