@@ -1,5 +1,6 @@
 import time
 import sys
+import os
 from pathlib import Path
 
 #from utils.helpers import read_input, timer, read_test_input
@@ -69,14 +70,24 @@ def remove_from_grid(grid, positions):
         grid_copy[row] = ''.join(line)
     return grid_copy
 
+def show(grid):
+    os.system("cls" if os.name == "nt" else "clear")
+    for row in grid:
+        print("".join(row))
+
 @timer
 def part2(data: str) -> int:
     accessible = 0
     grid = data.splitlines()
+    show(grid)
+    time.sleep(1)
 
     while True:  
         accessible_list = check_accessible(grid)   
         grid = remove_from_grid(grid, accessible_list)
+
+        show(grid)
+        time.sleep(1)
 
         if len(accessible_list) == 0:
             break
